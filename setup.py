@@ -18,7 +18,8 @@ setup(
     version=version,
     description='Python code samples ',
     packages=[
-        'hellopack',
+        'hello',
+        'hello/test',
     ],
     scripts=[
         'script/scripta',
