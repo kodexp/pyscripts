@@ -26,7 +26,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         name = sys.argv[1]
     else:
-        name = "Friend"
+        name = "My Friend Amigo"
 
     obj = SayHello()
     obj.say(name)
