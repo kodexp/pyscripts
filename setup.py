@@ -4,7 +4,7 @@ from __future__ import print_function
 from distutils.core import setup
 import os
 
-version = '0.1'
+version = '0.5'
 
 # Append TeamCity build number if it gives us one.
 if 'TC_BUILD_NUMBER' in os.environ and version.endswith('b'):
