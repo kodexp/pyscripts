@@ -14,7 +14,7 @@ setup(
     name='hotpies',
     url='http://github.con',
     maintainer='Fei Zhang',
-    maintainer_email='fei.zhang@ga.gov.au',
+    maintainer_email='feizhang@gmail.com',
     version=version,
     description='Python code samples ',
     packages=[
