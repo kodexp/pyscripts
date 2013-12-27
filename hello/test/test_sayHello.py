@@ -2,7 +2,7 @@ from unittest import TestCase
 
 __author__ = 'fzhang'
 
-import say_hello
+from hello import say_hello
 
 class TestSayHello(TestCase):
 
