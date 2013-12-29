@@ -10,27 +10,21 @@ version = '0.5'
 if 'TC_BUILD_NUMBER' in os.environ and version.endswith('b'):
     version += '-' + os.environ['TC_BUILD_NUMBER']
 
-setup(
-    name='hotpies',
-    url='http://github.con',
-    maintainer='Fei Zhang',
-    maintainer_email='feizhang@gmail.com',
-    version=version,
-    description='Python code samples ',
-    packages=[
+config={
+    'name':'hotpies',
+    'url':'http://github.con',
+    'maintainer':'Fei Zhang',
+    'maintainer_email':'feizhang@gmail.com',
+    'version':version,
+    'description':'Python samples ',
+    'packages':[
         'topy/hello',
 	'topy/logging',
 	'topy/subproc',
 	'topy/fabric_admin',
         'tests',
     ],
-    scripts=[
-        'bin/scripta',
-    ],
-    requires=[
-        'pika',
-        'requests',
-        'suds',
-        'mock'
-    ]
-)
+    'scripts':[ 'bin/scripta', ],
+    'requires':[ 'pika', 'requests', 'suds', 'mock' ]
+}
+setup(**config)
