@@ -18,11 +18,14 @@ setup(
     version=version,
     description='Python code samples ',
     packages=[
-        'hello',
-        'hello/test',
+        'topy/hello',
+	'topy/logging',
+	'topy/subproc',
+	'topy/fabric_admin',
+        'tests',
     ],
     scripts=[
-        'script/scripta',
+        'bin/scripta',
     ],
     requires=[
         'pika',
