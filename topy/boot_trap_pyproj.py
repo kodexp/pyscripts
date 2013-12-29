@@ -31,14 +31,14 @@ class BootTrapper:
         pass
 
     def create_setup(self):
-        """ make a setup.py
+        """ make a setup.py see config samples
         """
     def create_tox_conf(self):
         """
         create a sample tox.ini
         """
 
-    def create_readme_(self):
+    def create_readme(self):
         """
         create a README.txt"
         """
