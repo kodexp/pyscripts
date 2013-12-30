@@ -19,12 +19,13 @@ config={
     'description':'Python samples ',
     'packages':[
         'topy/hello',
-	'topy/logging',
-	'topy/subproc',
-	'topy/fabric_admin',
-        'tests',
-    ],
+        'topy/logging',
+        'topy/subproc',
+        'topy/fabric_admin',
+        'tests', ],
     'scripts':[ 'bin/scripta', ],
     'requires':[ 'pika', 'requests', 'suds', 'mock' ]
 }
+
+
 setup(**config)
