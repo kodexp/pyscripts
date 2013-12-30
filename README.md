@@ -1,8 +1,6 @@
-Readme.md
+README.md
 
 from cmdline term	
-
-from github webUI edit
 
 
 plugin
