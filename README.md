@@ -19,5 +19,5 @@ singleton
 
 decorator
 
-References:
+References
 
