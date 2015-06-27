@@ -4,21 +4,23 @@ import os, sys
 import time
 
 
+THRESHOLD=2*60*60
+
 def get_last_file_mtime():
     """
     get the latest file in a dir/list and return its mtime in epochseconds
     :return:epochseconds
     """
-    return time.time()
+    return time.time() -THRESHOLD
 
 
-def main():
+def pydog(difftime):
     from datadog import initialize
     from datadog import api  # Use Datadog REST API client
 
     options = {
-        'api_key': '1d563',
-        'app_key': 'd125e'
+
+
     }
 
     initialize(**options)
@@ -32,17 +34,25 @@ def main():
 
     api.Event.create(title=title, text=text, tags=tags)
 
+# Use Statsd, a Python client for DogStatsd
+    from datadog import statsd
+
+    statsd.increment('LatestFileMtime')
+    statsd.gauge('timeGap', difftime)
+
+# Or ThreadStats, an alternative tool to collect and flush metrics, using Datadog REST API
+#from datadog import ThreadStats
+# See https://github.com/DataDog/datadogpy
+
+
 if __name__=="__main__":
 
-    THRESHOLD=2*60*60
 
     lastfile_mtime=get_last_file_mtime()
 
-    time.sleep(10)
+    time.sleep(1)
 
     now=time.time()
-
-
 
     print now
 
@@ -51,4 +61,4 @@ if __name__=="__main__":
     print difftime
 
     if difftime>THRESHOLD:
-        main()
+        pydog(1000*difftime)

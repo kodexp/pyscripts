@@ -7,11 +7,11 @@ import os
 version = '0.5'
 
 # Append TeamCity build number if it gives us one.
-if 'TC_BUILD_NUMBER' in os.environ and version.endswith('b'):
-    version += '-' + os.environ['TC_BUILD_NUMBER']
+# if 'TC_BUILD_NUMBER' in os.environ and version.endswith('b'):
+#     version += '-' + os.environ['TC_BUILD_NUMBER']
 
 config={
-    'name':'hotpies',
+    'name':'pytools',
     'url':'http://github.con',
     'maintainer':'Fei Zhang',
     'maintainer_email':'feizhang@gmail.com',
