@@ -31,3 +31,5 @@ logs
 zprivate
 scratch*
 nohup*
+
+*.log
