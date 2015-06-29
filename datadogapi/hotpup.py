@@ -92,10 +92,10 @@ def dog_event(satname,diffhours):
     runuser = os.environ['USER']
     prog_name= sys.argv[0]
 
-    title = satname +': The latest hotspots are older than %s hours'% (MAX_HOUR_HOTSPOT)
+    title = satname +': The latest hotspots were acquired %s hours ago'% ( str(diffhours)[:5] )
     tags = ['version:1', 'PythonApp:hotpup.py']
 
-    text =  "It was %s hours ago !!! "%(str(diffhours)[:5])
+    text =  "It was older than %s hours  "%( MAX_HOUR_HOTSPOT)
     text = text + 'This event was created on %s by %s using program %s ' % (hostname, runuser, prog_name)
 
     api.Event.create(title=title, text=text, tags=tags)
