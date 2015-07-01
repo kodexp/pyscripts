@@ -116,6 +116,9 @@ def dog_metric(satname, difftime):
     CurrentPosixTime10 = time.time() + 10
 
 
+    ####
+
+
     # Submit a single point with a timestamp of `now`
     api.Metric.send(metric=satname+'.Latesthotspot.Minutes.Ago', points=difftime)
 
