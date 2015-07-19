@@ -17,7 +17,7 @@ options['app_key']=os.environ['DD_APP_KEY']
 initialize(**options)
 
 
-MAX_HOUR_HOTSPOT=6
+MAX_HOUR_HOTSPOT=10
 THRESHOLD=MAX_HOUR_HOTSPOT*60*60
 
 logging.basicConfig(level=logging.DEBUG,
@@ -120,7 +120,8 @@ def dog_metric(satname, difftime):
 
 
     # Submit a single point with a timestamp of `now`
-    api.Metric.send(metric=satname+'.Latesthotspot.Minutes.Ago', points=difftime)
+    #api.Metric.send(metric=satname+'.Latesthotspot.Minutes.Ago', points=difftime)
+    api.Metric.send(metric=satname+'.LatestHotspot.AgeHours', points=difftime)
 
     # Submit a point with a timestamp (must be ~current)
     #api.Metric.send(metric='my.pair', points=(CurrentPosixTime, 100))
