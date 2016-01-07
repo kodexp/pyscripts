@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# crontab entry
+
+59 * * * * cd /data/sentinel/wget_ftp; ./wget.sh &>> /data/sentinel/wget_ftp/crontab.log
+#########################################################################################
+
 # suppose proxy has been setup
 
 
