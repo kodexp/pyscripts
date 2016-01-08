@@ -12,7 +12,7 @@ from datadog import api  # Use Datadog REST API client
 
 
 options = {}
-options['api_key']=os.environ['DD_API_KEY']
+options['api_key']=os.environ['DD_API_KEY']  # put these in the environment variables setenv.bash
 options['app_key']=os.environ['DD_APP_KEY']
 initialize(**options)
 
