@@ -14,6 +14,6 @@ class TestSayHello(TestCase):
         print "Calling tearDown"
         del self.obj
 
-    def test_say(self):
-        msg=self.obj.say("Friend")
-        self.assertEquals(msg, "Hello Friend")
+    def test_say(self, himsg="Friend"):
+        msg=self.obj.say(himsg)
+        self.assertEquals(msg, himsg)
