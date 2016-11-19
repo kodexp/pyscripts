@@ -18,7 +18,7 @@ config={
     'version':version,
     'description':'Python samples ',
     'packages':[
-        #'topy/hello',
+        'topy/hello',
         'topy/logging',
         'topy/subproc',
         'topy/fabric_admin',
